@@ -47,11 +47,10 @@ footer {
   margin-top: 25px;
 }
 
-.Weather img {
-  margin-right: 5px;
+.Weather canvas {
+  margin-top: 10px;
+  margin-right: 10px;
   margin-bottom: 20px;
-  height: 100px;
-  width: 100px;
 }
 
 .Weather .units {
