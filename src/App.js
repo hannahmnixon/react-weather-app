@@ -9,12 +9,7 @@ export default function App() {
         <Weather />
         <footer>
           This project was created by Hannah Nixon and is open-sourced on{" "}
-          <a
-            href="https://github.com/hannahmnixon/react-weather-app"
-            target="_blank"
-          >
-            Github
-          </a>
+          <a href="https://github.com/hannahmnixon/react-weather-app">Github</a>
         </footer>
       </div>
     </div>

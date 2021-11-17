@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+import axios from "axios";
 
 export default function Weather() {
+  const [temperature, setTemperature] = useState(null);
+
+  const apiKey = "a6ff4b7a9b12bc3ba444e702f94356c3";
+  let city = "San Francisco";
+  let apiUrl = `api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   return (
     <div className="Weather">
       <form>
@@ -29,7 +35,7 @@ export default function Weather() {
             alt="Partly cloudy"
           />
           <span className="temperature">16</span>
-          <span className="units">°C</span>
+          <span className="units">°F</span>
         </div>
         <div className="col-6">
           <ul>
