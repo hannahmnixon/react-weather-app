@@ -41,6 +41,12 @@ footer {
   text-transform: capitalize;
 }
 
+.Weather a {
+  color: #8ec351;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .Weather .temperature {
   font-size: 75px;
   font-weight: 400;
