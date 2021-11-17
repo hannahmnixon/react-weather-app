@@ -31,7 +31,7 @@ export default function Weather(props) {
 
   function search() {
     const apiKey = "a6ff4b7a9b12bc3ba444e702f94356c3";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=${city}}&appid=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -54,8 +54,8 @@ export default function Weather(props) {
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>{weatherData.date}</li>
-          <li className="description">{weatherData.description}</li>
+          <li>{`${weatherData.date}`}</li>
+          <li className="description">{`${weatherData.description}`}</li>
         </ul>
         <div className="row">
           <div className="col-6">
