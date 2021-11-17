@@ -31,7 +31,7 @@ export default function Weather(props) {
 
   function search() {
     const apiKey = "a6ff4b7a9b12bc3ba444e702f94356c3";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=${city}}&appid=${apiKey}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -52,7 +52,7 @@ export default function Weather(props) {
           </div>
           <div className="col-4">Right now in...</div>
         </form>
-        <h1>{weatherData.city}</h1>
+        <h1>{`${weatherData.city}`}</h1>
         <ul>
           <li>{`${weatherData.date}`}</li>
           <li className="description">{`${weatherData.description}`}</li>
@@ -66,12 +66,12 @@ export default function Weather(props) {
             <span className="temperature">
               {Math.round(weatherData.temperature)}
             </span>
-            <span className="units">°F</span>
+            <span className="units">°C</span>
           </div>
           <div className="col-6">
             <ul>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind} km/h</li>
+              <li>Humidity: {`${weatherData.humidity}`}%</li>
+              <li>Wind: {`${weatherData.wind}`} km/h</li>
             </ul>
           </div>
         </div>
