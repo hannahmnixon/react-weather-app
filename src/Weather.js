@@ -31,6 +31,7 @@ export default function Weather() {
                 autoFocus="on"
               />
             </div>
+            test
           </div>
           <div className="col-4">Right now in...</div>
         </form>
